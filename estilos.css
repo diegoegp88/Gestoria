@@ -115,14 +115,54 @@ nav .indicador {
 
 
 @media screen and (max-width: 800px) {
+	.hero h1 {
+		font-size: 60px;
+	}
+	
+	.hero p {
+		font-size: 25px;
+		text-transform: uppercase;
+		color: #113CFC;
+	}
 	nav a {
 		font-size: 14px;
 		padding: 5px;
 	}
+	.seccion h1 {
+		font-size: 40px;
+		margin-bottom: 20px;
+	}
+	.seccion p {
+		line-height: 30px;
+		margin-bottom: 40px;
+		color: #494949;
+		font-size: 20px;
+	}
+	
 }
 
 @media screen and (max-width: 450px) {
-	nav a {
-		font-size: 12px;
+	.hero h1 {
+		font-size: 40px;
 	}
+	
+	.hero p {
+		font-size: 10px;
+		text-transform: uppercase;
+		color: #113CFC;
+	}
+	nav a {
+		font-size: 9px;
+	}
+	.seccion h1 {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	.seccion p {
+		line-height: 20px;
+		margin-bottom: 40px;
+		color: #494949;
+		font-size: 15px;
+	}
+	
 }
