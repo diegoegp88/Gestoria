@@ -7,7 +7,7 @@ indicador.style.width = tamañoIndicador + 'px';
 
 let indexSeccionActiva;
 
-// Observer
+
 const observer = new IntersectionObserver((entradas, observer) => {
 	entradas.forEach(entrada => {
 		if(entrada.isIntersecting){
@@ -21,24 +21,24 @@ const observer = new IntersectionObserver((entradas, observer) => {
 	});
 }, {
 	rootMargin: '-80px 0px 0px 0px',
-	threshold: 0.2
+	threshold: 0.3
 });
 
-// Agregamos un observador para el hero.
+
 observer.observe(document.getElementById('hero'));
 
-// Asignamos un observador a cada una de las secciones
+
 secciones.forEach(seccion => observer.observe(seccion));
 
-// Evento para cuando la pantalla cambie de tamaño.
+
 const onResize = () => {
-	// Calculamos el nuevo tamaño que deberia tener el indicador.
+
 	tamañoIndicador = menu.querySelector('a').offsetWidth;
 
-	// Cambiamos el tamaño del indicador.
+
 	indicador.style.width = `${tamañoIndicador}px`;
 
-	// Volvemos a posicionar el indicador.
+	
 	indicador.style.transform = `translateX(${tamañoIndicador * indexSeccionActiva}px)`;
 }
 
