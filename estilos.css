@@ -168,6 +168,13 @@ nav .indicador {
 }
 
 @media screen and (max-width: 320px) {
+	.hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: calc(100vh - 100px);
+	}
 	.hero h1 {
 		font-size: 25px;
 	}
