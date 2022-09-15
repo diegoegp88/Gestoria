@@ -355,4 +355,9 @@ nav .indicador {
 	.formulario__btn {
 		width: 100%;
 	}
+	#grupo__consulta {
+		position: relative;
+		grid-column: auto;
+		height: 10rem;
+	}
 }
