@@ -60,9 +60,7 @@ window.addEventListener('resize', onResize);
 			}
 			
 			const campos = {
-				usuario: false,
 				nombre: false,
-				password: false,
 				correo: false,
 				telefono: false
 			}
