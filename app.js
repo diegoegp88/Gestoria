@@ -46,8 +46,6 @@ window.addEventListener('resize', onResize);
 
 
 			// Validacion de formulario.
-
-
 			const formulario = document.getElementById('formulario');
 			const inputs = document.querySelectorAll('#formulario input');
 			
@@ -104,21 +102,36 @@ window.addEventListener('resize', onResize);
 				input.addEventListener('blur', validarFormulario);
 			});
 			
-			formulario.addEventListener('submit', (e) => {
+			formulario.addEventListener('submit', async(e) => {
 				e.preventDefault();
 			
 				if(campos.nombre && campos.correo && campos.telefono ){
-					formulario.reset();
-			
+                    /*carga en base de datos*/
+					await fetch('https://sheet.best/api/sheets/0313a63c-b563-4197-8db5-354affc5b50f', {
+						method: 'POST',
+						mode: 'cors',
+						headers: {
+							'Content-Type':'application/json'
+						},
+						body: JSON.stringify({
+							"Nombre":formulario.nombre.value,
+							"Correo":formulario.correo.value,
+							"Telefono":formulario.telefono.value,
+							"Dominio":formulario.dominio.value,
+							"Consulta":formulario.consulta.value,
+						})
+					});
+					/*Valudacion de envio */
 					document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 					document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
 					setTimeout(() => {
 						document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
 					}, 5000);
-			
 					document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-						icono.classList.remove('formulario__grupo-correcto');
+						icono.classList.remove('formulario__grupo-correcto');					
 					});
+					formulario.reset();
+					
 				} else {
 					document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 				}
