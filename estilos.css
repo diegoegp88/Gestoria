@@ -35,6 +35,10 @@ a {
 	color: #113CFC;
 }
 
+#menu {
+	z-index: 100;
+}
+
 nav {
 	background: #fff;
 	height: 80px;
