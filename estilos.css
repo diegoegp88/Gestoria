@@ -117,6 +117,13 @@ nav .indicador {
 .seccion .img {
 	width: 100%;
 	vertical-align: top;
+	margin: 0px;
+}
+.seccion .img2 {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	vertical-align: top;
 	margin-bottom: 20px;
 }
 
