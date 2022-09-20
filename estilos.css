@@ -86,7 +86,7 @@ nav .indicador {
 	width: 90%;
 	margin: auto;
 
-	padding-top: 120px;
+	padding-top: 40px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -114,6 +114,27 @@ nav .indicador {
 	font-size: 20px;
 }
 
+.seccion li {
+	line-height: 38px;
+	margin-bottom: 40px;
+	color: #494949;
+	font-size: 20px;
+}
+
+.contenedor-texto .tramite {
+	font-weight: bold;
+	color:rgb(31, 124, 216);
+	font-style: normal;
+	font-size: 2rem;
+}
+
+.contenedor-texto {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 2rem;
+	color:rgb(7, 40, 73);
+}
+
 .seccion .img {
 	width: 100%;
 	vertical-align: top;
@@ -122,7 +143,7 @@ nav .indicador {
 .seccion .img2 {
 	display: flex;
 	flex-wrap: wrap;
-	width: 50%;
+	width: 100%;
 	vertical-align: top;
 	margin-bottom: 20px;
 }
