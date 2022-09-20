@@ -135,6 +135,8 @@ formulario.addEventListener('submit', async(e) => {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
 });
+
+
 //Escritura animado
 const typed = new Typed('.typed', {
 	strings: [
